@@ -1,0 +1,31 @@
+{
+  "ContentCreatorName": "dcmqi",
+  "ClinicalTrialSeriesID": "Session1",
+  "ClinicalTrialTimePointID": "1",
+  "SeriesDescription": "Tumor segmentation",
+  "SeriesNumber": "300",
+  "InstanceNumber": "1",
+  "BodyPartExamined": "BRAIN",
+  "segmentAttributes": [
+    [
+      {
+        "labelID": 1,
+        "SegmentDescription": "Tumor segmentation",
+        "SegmentAlgorithmType": "MANUAL",
+        "SegmentedPropertyCategoryCodeSequence": {
+          "CodeValue": "49755003",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Morphologically abnormal structure"
+        },
+        "SegmentedPropertyTypeCodeSequence": {
+          "CodeValue": "108369006",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Neoplasm"
+        }
+      }
+    ]
+  ],
+  "ContentLabel": "SEGMENTATION",
+  "ContentDescription": "Image segmentation",
+  "ClinicalTrialCoordinatingCenterName": "dcmqi"
+}
