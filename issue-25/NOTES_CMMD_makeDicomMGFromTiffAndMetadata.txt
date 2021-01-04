@@ -1,0 +1,45 @@
+2020/12/05
+
+Make DICOM Digital Mammography X-Ray For Presentation images from supplied TIFF images
+
+Make DICOM images dual-personality DICOM-TIFF (using -tiff option in dicom3tools utilities)
+
+Supplied TIFF images are (almost) all 8 bits and appear to have had windowing applied - keep as 8 bit (which is legal for DICOM MG though unusual)
+
+ - exception is CMMD1/D1-1343/L_CC.tif, which is 16 bits
+
+For window values in DICOM file use full window width and SIGMOID function (since that is what GE uses), per:
+
+  "http://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.11.2.html#sect_C.11.2.1.3.1"
+
+All are same matrix size that matches GE 24cm detector - assuming GE imager pixel spacing of 0.094090909 mm, since this is a required attribute
+
+Not all images have metadata (esp. in D2 set) but those that don't have siblings (e.g., side with tumor) that do so use that
+
+Use year as date and make 1st of Jan (and when year is missing making it 1901)
+
+No time so use 000000
+
+Use age as supplied
+
+Assume sex is female
+
+Use SCT (rather than SRT) codes for anatomy and view per CP 1850 - this may cause older mammo workstations that have not been upgraded to fail
+
+Converted files comply with DICOM standard (and pass dciodvfy) per:
+
+  "http://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_A.27.html"
+
+They do NOT comply with the IHE Mammo Display profile, which requires additional demographic, device and acquisition metadata for clinical and QC purposes - no way to recreate these from supplied metadata (i.e., fail dciodvfy with "-profile IHEMammo" option)
+
+Converted files can be viewed in mammography workstation simulator in PixelMed Java DICOM toolkit (com.pixelmed.display.MammoImageViewer)
+
+ - a screenshot of one of the converted subjects is included as an example of how the converted metadata is used for layout and demographic/technique annotation
+
+Script depends on:
+
+ - dicom3tools - "http://www.dclunie.com/dicom3tools.html"
+ - netpbm (for tifftopnm) - "http://netpbm.sourceforge.net/"
+
+
+You need to compile dicom3tools from source to get pnmtodc, ancreate, and dcmerge, since a valid root UID is required.
