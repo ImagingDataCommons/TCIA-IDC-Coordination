@@ -1,0 +1,100 @@
+{
+    "ContentCreatorName": "Reader1",
+    "ClinicalTrialSeriesID": "Session1",
+    "ClinicalTrialTimePointID": "1",
+    "SeriesDescription": "Segmentation",
+    "SeriesNumber": "300",
+    "InstanceNumber": "1",
+    "BodyPartExamined": "ABDOMEN",
+    "segmentAttributes": [
+        [
+            {
+                "labelID": 1,
+                "SegmentDescription": "Lymph node segmentation ID : 1",
+                "SegmentAlgorithmType": "AUTOMATIC",
+                "SegmentAlgorithmName": "Computer-generated candidate detections",
+                "SegmentedPropertyCategoryCodeSequence": {
+                    "CodeValue": "123037004",
+                    "CodingSchemeDesignator": "SCT",
+                    "CodeMeaning": "Anatomical Structure"
+                },
+                "SegmentedPropertyTypeCodeSequence": {
+                    "CodeValue": "818991007",
+                    "CodingSchemeDesignator": "SCT",
+                    "CodeMeaning": "abdominal lymph node"
+                },
+                "recommendedDisplayRGBValue": [
+                    255,
+                    46,
+                    0
+                ]
+            },
+            {
+                "labelID": 2,
+                "SegmentDescription": "Lymph node segmentation ID : 2",
+                "SegmentAlgorithmType": "AUTOMATIC",
+                "SegmentAlgorithmName": "Computer-generated candidate detections",
+                "SegmentedPropertyCategoryCodeSequence": {
+                    "CodeValue": "123037004",
+                    "CodingSchemeDesignator": "SCT",
+                    "CodeMeaning": "Anatomical Structure"
+                },
+                "SegmentedPropertyTypeCodeSequence": {
+                    "CodeValue": "818991007",
+                    "CodingSchemeDesignator": "SCT",
+                    "CodeMeaning": "abdominal lymph node"
+                },
+                "recommendedDisplayRGBValue": [
+                    255,
+                    92,
+                    0
+                ]
+            },
+            {
+                "labelID": 3,
+                "SegmentDescription": "Lymph node segmentation ID : 3",
+                "SegmentAlgorithmType": "AUTOMATIC",
+                "SegmentAlgorithmName": "Computer-generated candidate detections",
+                "SegmentedPropertyCategoryCodeSequence": {
+                    "CodeValue": "123037004",
+                    "CodingSchemeDesignator": "SCT",
+                    "CodeMeaning": "Anatomical Structure"
+                },
+                "SegmentedPropertyTypeCodeSequence": {
+                    "CodeValue": "818991007",
+                    "CodingSchemeDesignator": "SCT",
+                    "CodeMeaning": "abdominal lymph node"
+                },
+                "recommendedDisplayRGBValue": [
+                    255,
+                    139,
+                    0
+                ]
+            },
+            {
+                "labelID": 4,
+                "SegmentDescription": "Lymph node segmentation ID : 4",
+                "SegmentAlgorithmType": "AUTOMATIC",
+                "SegmentAlgorithmName": "Computer-generated candidate detections",
+                "SegmentedPropertyCategoryCodeSequence": {
+                    "CodeValue": "123037004",
+                    "CodingSchemeDesignator": "SCT",
+                    "CodeMeaning": "Anatomical Structure"
+                },
+                "SegmentedPropertyTypeCodeSequence": {
+                    "CodeValue": "818991007",
+                    "CodingSchemeDesignator": "SCT",
+                    "CodeMeaning": "abdominal lymph node"
+                },
+                "recommendedDisplayRGBValue": [
+                    255,
+                    185,
+                    0
+                ]
+            }
+        ]
+    ],
+    "ContentLabel": "SEGMENTATION-TCIA-AUTO-DETEC",
+    "ContentDescription": "Image segmentation -- tcia -- automatic detection",
+    "ClinicalTrialCoordinatingCenterName": "dcmqi"
+}
