@@ -39,6 +39,7 @@ class NiiSegHandler:
 
     def generate_rd_color(self):
         pass
+        # return cmapy.color('viridis', random.randrange(0, 256, 10), rgb_order=True)
 
     def generate_segment_data(self, id):
         seg_attr = self.json_template['segmentAttributes'][0][0].copy()
@@ -54,8 +55,10 @@ class NiiSegHandler:
     def save_json_metadata(self, output_path) -> None:
         out_json = self.create_json_metadata()
         if not os.path.exists(output_path):
+            # !touch $output_path
             subprocess.check_call("touch %s" % (str(output_path)), shell=True)
         else:
+            # !rm $output_path
             subprocess.check_call("rm %s" % (str(output_path)), shell=True)
         with open(output_path, "w") as outfile:
             json.dump(out_json, outfile, indent = 4)

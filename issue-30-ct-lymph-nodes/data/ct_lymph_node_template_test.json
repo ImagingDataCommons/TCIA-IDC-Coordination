@@ -1,0 +1,29 @@
+{
+  "ContentCreatorName": "Imaging Data Commons",
+  "ClinicalTrialSeriesID": "Session1",
+  "ClinicalTrialTimePointID": "1",
+  "SeriesDescription": "Segmentation",
+  "SeriesNumber": "300",
+  "InstanceNumber": "1",
+  "BodyPartExamined": "",
+  "segmentAttributes": [
+    [
+      {
+        "labelID": 1,
+        "SegmentDescription": "Lymph node segmentation ID",
+        "SegmentAlgorithmType": "AUTOMATIC",
+        "SegmentAlgorithmName": "Computer-generated candidate detections",
+        "SegmentedPropertyCategoryCodeSequence": {
+          "CodeValue": "123037004",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Anatomical Structure"
+        },
+        "SegmentedPropertyTypeCodeSequence": {},
+        "recommendedDisplayRGBValue": []
+      }
+    ]
+  ],
+  "ContentLabel": "SEGMENTATION-TCIA-AUTO-DETEC",
+  "ContentDescription": "Image segmentation -- tcia -- automatic detection",
+  "ClinicalTrialCoordinatingCenterName": "dcmqi"
+}
